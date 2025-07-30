@@ -23,28 +23,9 @@ const hookClick = (e) => {
     }
 }
 
+window.open = function (url, target, features) {
+    console.log('open', url, target, features)
+    location.href = url
+}
+
 document.addEventListener('click', hookClick, { capture: true })
-
-var vConsole = new window.VConsole()
-
-// css filter
-document.addEventListener('DOMContentLoaded', () => {
-    const targetNode = document.body
-    // 配置观察选项
-    const config = {
-        childList: true,
-        subtree: true,
-    }
-    const observer = new MutationObserver((mutationsList, observer) => {
-        for (const mutation of mutationsList) {
-            if (mutation.type === 'childList') {
-                const element0 = document.querySelector('0');
-                if (element0) {
-                    element0.style.display = 'none';
-                }
-            }
-        }
-    })
-    observer.observe(targetNode, config)
-})
-// end css filter
