@@ -1,22 +1,213 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>和乐社区便民法律服务平台 - 首页</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
+      body {
+        font-family: "Microsoft YaHei", "PingFang SC", "Helvetica Neue", Arial,
+          sans-serif;
+        background: url("首页.jpg") no-repeat center center fixed;
+        background-size: cover;
+        min-height: 100vh;
+        color: #333;
+        position: relative;
+      }
 
-            <form class="row" id="greet-form">
-                <input id="greet-input" placeholder="Enter a name..." />
-                <button type="submit">Greet</button>
-            </form>
-            <p id="greet-msg"></p>
-        </main>
-    </body>
+      .header {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      .title {
+        color: white;
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      }
+
+      .main-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+      }
+
+      .search-container {
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 20px;
+        padding: 40px;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        max-width: 500px;
+        width: 100%;
+      }
+
+      .search-title {
+        font-size: 28px;
+        color: #333;
+        margin-bottom: 20px;
+        font-weight: bold;
+      }
+
+      .search-subtitle {
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 30px;
+      }
+
+      .search-box {
+        position: relative;
+        margin-bottom: 30px;
+      }
+
+      .search-input {
+        width: 100%;
+        padding: 15px 20px;
+        border: 2px solid #e0e0e0;
+        border-radius: 50px;
+        font-size: 16px;
+        outline: none;
+        transition: all 0.3s ease;
+        background: white;
+      }
+
+      .search-input:focus {
+        border-color: #667eea;
+        box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+      }
+
+      .search-button {
+        background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+        color: white;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        width: 100%;
+      }
+
+      .search-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px rgba(255, 107, 107, 0.4);
+      }
+
+      .quick-services {
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+      }
+
+      .quick-service-btn {
+        background: linear-gradient(45deg, #74b9ff, #0984e3);
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        border-radius: 25px;
+        font-size: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .quick-service-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 4px 15px rgba(116, 185, 255, 0.3);
+      }
+
+      @media (max-width: 768px) {
+        .search-container {
+          padding: 30px 20px;
+        }
+
+        .search-title {
+          font-size: 24px;
+        }
+
+        .title {
+          font-size: 18px;
+        }
+
+        .logo {
+          width: 40px;
+          height: 40px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <img src="logo.jpg" alt="和乐社区" class="logo" />
+      <h1 class="title">和乐社区便民法律服务平台</h1>
+    </div>
+
+    <div class="main-content">
+      <div class="search-container">
+        <h2 class="search-title">便民法律服务</h2>
+        <p class="search-subtitle">
+          为您提供专业的法律文书生成、法律咨询等服务
+        </p>
+
+        <div class="search-box">
+          <input
+            type="text"
+            class="search-input"
+            placeholder="请输入您需要的法律服务..."
+            id="searchInput"
+          />
+        </div>
+
+        <button class="search-button" onclick="goToServices()">找服务</button>
+
+        <div class="quick-services">
+          <button class="quick-service-btn" onclick="goToServices()">
+            法律文书
+          </button>
+          <button class="quick-service-btn" onclick="goToServices()">
+            法律咨询
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function goToServices() {
+        window.location.href = "服务选择.html";
+      }
+
+      // 搜索框回车事件
+      document
+        .getElementById("searchInput")
+        .addEventListener("keypress", function (e) {
+          if (e.key === "Enter") {
+            goToServices();
+          }
+        });
+    </script>
+  </body>
 </html>
