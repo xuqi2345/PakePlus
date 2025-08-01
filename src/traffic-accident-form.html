@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>交通事故纠纷起诉状填写 - 和乐社区便民法律服务平台</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="back-button" onclick="goBack()">← 返回</div>
+            <h1 class="title">交通事故纠纷起诉状填写</h1>
+        </header>
+
+        <main class="main-content">
+            <form id="lawsuitForm" class="lawsuit-form">
+                <div class="form-group">
+                    <input type="text" id="plaintiff" name="plaintiff" class="form-input" placeholder="填写原告身份事项(包括:姓名,性别,出生年月,民族职业,身份证号,住址,联系电话,各事项用","隔开)">
+                    <label class="form-label">填写原告身份事项(包括:姓名,性别,出生年月,民族职业,身份证号,住址,联系电话,各事项用","隔开)</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="defendant" name="defendant" class="form-input" placeholder="填写被告身份事项(与原告写法一致)">
+                    <label class="form-label">填写被告身份事项(与原告写法一致)</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="cause" name="cause" class="form-input" placeholder="填写案由">
+                    <label class="form-label">填写案由</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="requests" name="requests" class="form-textarea" placeholder="填写诉讼请求(各诉讼请求分别列举)"></textarea>
+                    <label class="form-label">填写诉讼请求(各诉讼请求分别列举)</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="facts" name="facts" class="form-textarea" placeholder="填写事实(写清当事人之间的法律关系及权益受侵害具体情况)"></textarea>
+                    <label class="form-label">填写事实(写清当事人之间的法律关系及权益受侵害具体情况)</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="reasons" name="reasons" class="form-textarea" placeholder="填写理由(针对诉讼请求,阐述理由)"></textarea>
+                    <label class="form-label">填写理由(针对诉讼请求,阐述理由)</label>
+                </div>
+
+                <div class="form-group">
+                    <textarea id="basis" name="basis" class="form-textarea" placeholder="填写起诉依据(具体引用法律条文)"></textarea>
+                    <label class="form-label">填写起诉依据(具体引用法律条文)</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="court" name="court" class="form-input" placeholder="填写致送的法院">
+                    <label class="form-label">填写致送的法院</label>
+                </div>
+
+                <div class="form-actions">
+                    <p class="submit-hint">填写完毕后,点击"提交"</p>
+                    <button type="submit" class="submit-btn">提交</button>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <!-- 生成的文书模态框 -->
+    <div class="modal" id="documentModal">
+        <div class="modal-content document-content">
+            <span class="close">&times;</span>
+            <div id="generatedDocument"></div>
+            <div class="document-actions">
+                <button class="print-btn" onclick="printDocument()">打印文书</button>
+                <button class="download-btn" onclick="downloadDocument()">下载文书</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/traffic-accident-form.js"></script>
+</body>
+</html>
