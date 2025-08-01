@@ -1,0 +1,277 @@
+/* 全局样式 */
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    background: url('../img/2.png') no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 返回按钮样式 */
+.back-button {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #667eea;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+}
+
+.back-button:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* 头部样式调整 */
+.header {
+    position: relative;
+    padding-left: 80px;
+    padding-right: 30px;
+}
+
+/* 表单容器 */
+.lawsuit-form {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* 表单组 */
+.form-group {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+/* 表单标签 */
+.form-label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #2c3e50;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+/* 输入框 */
+.form-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* 文本域 */
+.form-textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 10px;
+    font-size: 1rem;
+    color: #333;
+    background: white;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+    min-height: 120px;
+    resize: vertical;
+    font-family: inherit;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-textarea::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* 表单操作区域 */
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #f0f0f0;
+}
+
+/* 提交提示 */
+.submit-hint {
+    color: #666;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin: 0;
+}
+
+/* 提交按钮 */
+.submit-btn {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* 文书模态框样式 */
+.document-content {
+    max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+#generatedDocument {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
+    color: #333;
+    white-space: pre-line;
+    font-family: 'SimSun', '宋体', serif;
+    text-align: justify;
+}
+
+/* 文书操作按钮 */
+.document-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+.print-btn, .download-btn {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.print-btn:hover, .download-btn:hover {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header {
+        padding-left: 70px;
+        padding-right: 20px;
+    }
+    
+    .back-button {
+        left: 15px;
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+    
+    .lawsuit-form {
+        padding: 25px;
+        margin: 0 15px;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .submit-btn {
+        width: 100%;
+        padding: 15px 30px;
+    }
+    
+    .document-actions {
+        flex-direction: column;
+    }
+    
+    .print-btn, .download-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding-left: 60px;
+        padding-right: 15px;
+    }
+    
+    .back-button {
+        left: 10px;
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .lawsuit-form {
+        padding: 20px;
+        margin: 0 10px;
+    }
+    
+    .form-input, .form-textarea {
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .form-label {
+        font-size: 0.9rem;
+    }
+    
+    .submit-btn {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+} 
