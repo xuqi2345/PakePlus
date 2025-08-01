@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单测试</title>
+    <style>
+        .logo-container {
+            background: white;
+            border-radius: 0;
+            padding: 0 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 5;
+            height: 100%;
+            min-height: 80px;
+            width: auto;
+            min-width: 80px;
+        }
+        
+        .community-logo {
+            width: auto;
+            height: 100%;
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+        }
+        
+        /* 强制隐藏所有文字 */
+        .logo-container *:not(img) {
+            display: none !important;
+        }
+        
+        .logo-text,
+        .banner-line,
+        .star,
+        .banner-text,
+        .community-name {
+            display: none !important;
+            visibility: hidden !important;
+            opacity: 0 !important;
+            font-size: 0 !important;
+            color: transparent !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <img src="img/3.png" alt="和乐社区Logo" class="community-logo">
+    </div>
+    
+    <p>如果上面只显示图片，没有文字，说明修改成功。</p>
+</body>
+</html> 
