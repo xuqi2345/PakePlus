@@ -1,0 +1,482 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+    min-height: 100vh;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 绿色头部区域 */
+.green-header {
+    background: #20B2AA;
+    padding: 20px 30px;
+    position: relative;
+    z-index: 10;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 80px;
+}
+
+/* 返回按钮区域 */
+.back-button-section {
+    display: flex;
+    align-items: center;
+}
+
+.back-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #20B2AA;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.back-btn:hover {
+    background: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.back-btn:active {
+    transform: translateY(0);
+}
+
+.back-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.back-text {
+    font-size: 0.9rem;
+}
+
+/* 左侧Logo区域 */
+.logo-section {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: auto;
+}
+
+.logo-container {
+    background: white;
+    border-radius: 0;
+    padding: 0 5px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 5;
+    flex-direction: row !important;
+    height: 100%;
+    min-height: 80px;
+    width: auto;
+    min-width: 80px;
+}
+
+.community-logo {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 强制隐藏所有可能的文字内容 */
+.logo-container *:not(img) {
+    display: none !important;
+}
+
+.logo-container::before,
+.logo-container::after {
+    display: none !important;
+    content: none !important;
+}
+
+/* 覆盖所有可能的logo文字样式 */
+.logo-text,
+.banner-line,
+.star,
+.banner-text,
+.community-name {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    font-size: 0 !important;
+    color: transparent !important;
+}
+
+/* 右侧标题区域 */
+.title-section {
+    flex: 1;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.platform-title {
+    font-size: 2.2rem;
+    color: white;
+    font-weight: 700;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+/* 白色内容区域 */
+.white-content {
+    background: white;
+    flex: 1;
+    border: 3px solid #20B2AA;
+    border-top: none;
+    border-radius: 0 0 15px 15px;
+    position: relative;
+    z-index: 5;
+}
+
+.content-container {
+    padding: 40px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: calc(100vh - 200px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 头部样式 */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 主要内容区域 */
+.main-content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 服务网格 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    width: 100%;
+    max-width: 1000px;
+}
+
+/* 服务卡片 */
+.service-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 30px 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    border-color: #667eea;
+}
+
+.service-card:active {
+    transform: translateY(-2px);
+}
+
+/* 服务图标 */
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    display: block;
+}
+
+/* 服务标题 */
+.service-title {
+    font-size: 1.3rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* 箭头 */
+.arrow {
+    font-size: 1.5rem;
+    color: #667eea;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* 模态框样式 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 5% auto;
+    padding: 30px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+#modalTitle {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #667eea;
+    padding-bottom: 10px;
+}
+
+#modalContent {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .back-button-section {
+        order: -1;
+        margin-bottom: 10px;
+    }
+    
+    .back-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+    
+    .back-icon {
+        font-size: 1rem;
+    }
+    
+    .back-text {
+        font-size: 0.8rem;
+    }
+    
+    .title-section {
+        margin-left: 0;
+    }
+    
+    .platform-title {
+        font-size: 1.8rem;
+    }
+    
+    .logo-container {
+        padding: 0 4px;
+        min-height: 70px;
+        min-width: 70px;
+    }
+    
+    .community-logo {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .content-container {
+        padding: 30px 20px;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .title {
+        font-size: 2rem;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        padding: 25px 20px;
+    }
+    
+    .service-icon {
+        font-size: 2.5rem;
+    }
+    
+    .service-title {
+        font-size: 1.2rem;
+    }
+    
+    .modal-content {
+        margin: 10% auto;
+        width: 95%;
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .green-header {
+        padding: 15px 20px;
+    }
+    
+    .back-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+    
+    .back-icon {
+        font-size: 0.9rem;
+    }
+    
+    .back-text {
+        font-size: 0.7rem;
+    }
+    
+    .platform-title {
+        font-size: 1.5rem;
+    }
+    
+    .logo-container {
+        padding: 0 3px;
+        min-height: 60px;
+        min-width: 60px;
+    }
+    
+    .community-logo {
+        width: auto;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    
+    .content-container {
+        padding: 20px 15px;
+    }
+    
+    .title {
+        font-size: 1.8rem;
+    }
+    
+    .header {
+        padding: 20px;
+    }
+    
+    .service-card {
+        padding: 20px 15px;
+    }
+    
+    .service-icon {
+        font-size: 2rem;
+    }
+}
+
+/* 加载动画 */
+.service-card {
+    animation: fadeInUp 0.6s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
+.service-card:nth-child(7) { animation-delay: 0.7s; }
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
