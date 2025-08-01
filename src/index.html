@@ -1,22 +1,105 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" href="styles.css" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PakePlus App</title>
-        <script type="module" src="/main.js" defer></script>
-    </head>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>和乐社区便民法律服务平台</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- 绿色头部区域 -->
+        <header class="green-header">
+            <div class="header-content">
+                <!-- 返回按钮 -->
+                <div class="back-button-section">
+                    <button class="back-btn" onclick="goBack()">
+                        <span class="back-icon">←</span>
+                        <span class="back-text">返回</span>
+                    </button>
+                </div>
+                
+                <!-- 左侧Logo区域 -->
+                <div class="logo-section">
+                    <div class="logo-container" style="display: flex; align-items: center; justify-content: center;">
+                        <img src="img/3.png" alt="和乐社区Logo" class="community-logo">
+                    </div>
+                </div>
+                
+                <!-- 右侧标题区域 -->
+                <div class="title-section">
+                    <h1 class="platform-title">和乐社区便民法律服务平台</h1>
+                </div>
+            </div>
+        </header>
 
-    <body>
-        <main class="container">
-            <h1>Welcome to PakePlus</h1>
+        <!-- 白色内容区域 -->
+        <main class="white-content">
+            <div class="content-container">
+                <div class="container">
+                    <header class="header">
+                        <h1 class="title">和乐社区便民法律服务平台</h1>
+                    </header>
 
-            <form class="row" id="greet-form">
-                <input id="greet-input" placeholder="Enter a name..." />
-                <button type="submit">Greet</button>
-            </form>
-            <p id="greet-msg"></p>
+                    <main class="main-content">
+                        <div class="services-grid">
+                            <div class="service-card" data-service="legal-documents">
+                                <div class="service-icon">📄</div>
+                                <h3 class="service-title">常用法律文书</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="legal-regulations">
+                                <div class="service-icon">📋</div>
+                                <h3 class="service-title">常用法律法规</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="legal-consultation">
+                                <div class="service-icon">💬</div>
+                                <h3 class="service-title">法律咨询</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="legal-aid">
+                                <div class="service-icon">🤝</div>
+                                <h3 class="service-title">法律援助</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="legal-theater">
+                                <div class="service-icon">🎭</div>
+                                <h3 class="service-title">普法微剧场</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="legal-qa">
+                                <div class="service-icon">❓</div>
+                                <h3 class="service-title">法律知识问答</h3>
+                                <div class="arrow">→</div>
+                            </div>
+
+                            <div class="service-card" data-service="feedback">
+                                <div class="service-icon">📝</div>
+                                <h3 class="service-title">群众反馈</h3>
+                                <div class="arrow">→</div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+            </div>
         </main>
-    </body>
+    </div>
+
+    <!-- 模态框 -->
+    <div class="modal" id="serviceModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"></h2>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
 </html>
