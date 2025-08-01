@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>测试页面</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-container">
+        <!-- 绿色头部区域 -->
+        <header class="green-header">
+            <div class="header-content">
+                <!-- 返回按钮 -->
+                <div class="back-button-section">
+                    <button class="back-btn" onclick="goBack()">
+                        <span class="back-icon">←</span>
+                        <span class="back-text">返回</span>
+                    </button>
+                </div>
+                
+                <!-- 左侧Logo区域 -->
+                <div class="logo-section">
+                    <div class="logo-container">
+                        <img src="img/3.png" alt="和乐社区Logo" class="community-logo">
+                    </div>
+                </div>
+                
+                <!-- 右侧标题区域 -->
+                <div class="title-section">
+                    <h1 class="platform-title">和乐社区便民法律服务平台</h1>
+                </div>
+            </div>
+        </header>
+
+        <!-- 白色内容区域 -->
+        <main class="white-content">
+            <div class="content-container">
+                <h2>测试页面 - Logo应该只显示图片，没有文字</h2>
+                <p>如果您看到这个页面，说明修改已经生效。</p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        function goBack() {
+            window.location.href = 'home.html';
+        }
+    </script>
+</body>
+</html> 
